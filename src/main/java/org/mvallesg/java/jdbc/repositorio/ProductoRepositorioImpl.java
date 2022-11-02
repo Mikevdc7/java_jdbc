@@ -1,6 +1,5 @@
 package org.mvallesg.java.jdbc.repositorio;
 
-import com.mysql.cj.x.protobuf.MysqlxPrepare;
 import org.mvallesg.java.jdbc.modelo.Categoria;
 import org.mvallesg.java.jdbc.modelo.Producto;
 import org.mvallesg.java.jdbc.util.ConexionBD;
