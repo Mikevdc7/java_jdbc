@@ -1,6 +1,7 @@
 package org.mvallesg.java.jdbc;
 
 
+import org.mvallesg.java.jdbc.modelo.Categoria;
 import org.mvallesg.java.jdbc.modelo.Producto;
 import org.mvallesg.java.jdbc.repositorio.ProductoRepositorioImpl;
 import org.mvallesg.java.jdbc.repositorio.Repositorio;
@@ -38,9 +39,14 @@ public class EjemploJdbc {
 
             System.out.println("========== insertar nuevo producto ==========");
             Producto producto = new Producto();
-            producto.setNombre("Teclado mecánico");
-            producto.setPrecio(500);
+            producto.setNombre("Teclado Razer mecánico");
+            producto.setPrecio(550);
             producto.setFechaRegistro(new Date());
+
+            Categoria categoria = new Categoria();
+            categoria.setId(3L); // En la bbdd, el id de la categoría "Computación" sabemos que es 3
+            producto.setCategoria(categoria);
+
             repositorio.guardar(producto);
             System.out.println("Producto guardado con éxito!");
 
